@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+.sect {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.sect #main_image {
+    text-align: center;
+}
+
+.sect h1{
+    font-family: Garamond sans-serif;
+}
+
+.sect #demo{
+    height: 300px;
+    width: 300px;
+}
+
+.sect .col-lg-6 #edges{
+    height: 400px;
+    width: 400px;
+}
+
+
+.sect #demo2 {
+    position:absolute;
+    z-index:1;
+}
+
+.container{
+    display:inline-block;
+    width:900px;
+    height:600px;
+    /*margin: 0 auto;*/
+    position:relative;
+    border:5px solid black;
+    border-radius: 10px;
+    /*box-shadow: 0 5px 50px #333*/
+}
+
+.sect #canvasDiv{
+    position:relative;
+    z-index:20;
+}

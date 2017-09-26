@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../static/css/startpage.css">
+{% load staticfiles %}
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Comics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="sect">
+    <h1>Upload Photo</h1>
+    <br><br>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="button" class='btn btn-primary' onclick="document.getElementById('main_image').click();">Upload</button>
+        <input id="main_image" style="display:none;" type="file" onchange="preview()"/>
+{#        <button id="sendPost" class='btn btn-warning' type="submit">Let's start</button>#}
+        <br><br><br><br>
+        <img src="#" id="demo" style="width: 512px; height: 512px"/>
+    </form>
+</div>
+
+<div class="sect">
+    <table style="width: 100%;">
+        <tr style="text-align: center;">
+            <th style="text-align: center; display: inline">
+                <h1>Colorize it</h1>
+                <img id='demo2' src="" alt="" style="width: 512px; height: 512px"/>
+                <canvas id="canvasDiv" style="width: 512px; height: 512px; opacity: 0.6; border: solid 3px black"></canvas>
+                <br>
+            </th>
+            <th>
+                <button type="button" class="btn btn-primary" onclick="document.getElementById('colorPicker').click()">Color</button>
+                <input type="color" style="display: none" id="colorPicker" name="color"/>
+            </th>
+            <th style="text-align: center">
+                <h1>See result</h1>
+                <img id='temp' src="" alt="" style="width: 512px; height: 512px; border: solid 3px black"/>
+            </th>
+        </tr>
+    </table>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="../../static/js/index.js"></script>
+<script src="../../static/js/drawingApp.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

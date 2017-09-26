@@ -1,0 +1,14 @@
+<html>
+    <body>
+
+        {% if saved %}
+            <strong>Your photo was saved.</strong>
+            <img src="{{ image.url }}" style="height:50%; width: 40%" alt="Image processing...."/>
+        {% endif %}
+
+        {% if not saved %}
+            <strong>Your photo was not saved.</strong>
+        {% endif %}
+
+    </body>
+</html>
